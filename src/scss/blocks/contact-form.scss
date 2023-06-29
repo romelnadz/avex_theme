@@ -1,0 +1,20 @@
+// TODO: refactor nested selectors
+
+@import "./form";
+
+.contact-form {
+  form {
+    margin-top: 2rem;
+  }
+
+  &__button {
+    max-width: 200px;
+    margin: 1.5rem 0;
+  }
+
+  &__fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,70 @@
+// TODO: refactor nested selectors
+
+.products-carousel {
+  overflow: hidden;
+  @include media($tablet) {
+    .swiper-slide {
+      flex: 0 0 50%;
+    }
+  }
+
+  &__title {
+    margin: rem(60px) rem(20px) rem(20px);
+    text-align: center;
+  }
+
+  &__button {
+    margin: rem(40px) rem(20px) rem(40px);
+    text-align: center;
+    @include media($tablet) {
+      margin: rem(16px) rem(16px);
+    }
+  }
+
+  .products-carousel-swiper {
+    position: relative;
+  }
+
+  .swiper-button {
+    position: absolute;
+    top: 33%;
+    right: 1rem;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    @include media($tablet) {
+      top: 45%;
+    }
+
+    @include media($mobile) {
+      top: 35%;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    svg {
+      fill: $color-black;
+      @include media($tablet) {
+        width: 24px;
+      }
+    }
+
+    &.swiper-button-disabled {
+      svg {
+        fill: none;
+      }
+    }
+  }
+
+  .swiper-button-prev {
+    left: 1rem;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}

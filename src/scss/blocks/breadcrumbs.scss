@@ -1,0 +1,19 @@
+.breadcrumbs-wrap {
+  padding-top: 2rem;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+
+  li {
+    a {
+      color: inherit;
+    }
+  }
+
+  svg {
+    margin: 5px;
+  }
+}
